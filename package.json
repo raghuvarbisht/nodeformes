@@ -1,0 +1,28 @@
+{
+  "name": "nodefrmes",
+  "version": "1.0.0",
+  "description": "node form examples",
+  "keywords": [
+    "nodeforms"
+  ],
+  "homepage": "https://github.com/raghuvarbisht/nodeformes#readme",
+  "bugs": {
+    "url": "https://github.com/raghuvarbisht/nodeformes/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raghuvarbisht/nodeformes.git"
+  },
+  "license": "ISC",
+  "author": "raghuvar",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}

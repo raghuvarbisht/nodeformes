@@ -1,0 +1,122 @@
+/* === Global Styles === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+}
+
+/* === Header === */
+header {
+  height: 70px;
+  margin: 0;
+  background: linear-gradient(to right, #ad5f00, #1ae869);
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* === Navigation === */
+nav {
+  background: #ffffffcc; /* semi-transparent white */
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #004aad;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff6f61;
+  transform: scale(1.05);
+}
+
+/* === Main Content === */
+main {
+  padding: 20px 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* === Forms === */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #004aad;
+  box-shadow: 0 0 5px rgba(0, 74, 173, 0.3);
+  outline: none;
+}
+
+button {
+  margin-top: 20px;
+  background: linear-gradient(to right, #ad5f00, #1ae869);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(to right, #ad5f00, #1ae869);
+  transform: scale(1.01);
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  background: linear-gradient(to right, #ad5f00, #1ae869);
+  color: white;
+  padding: 15px 0;
+  margin-top: 40px;
+  box-shadow: 0 -3px 6px rgba(0,0,0,0.1);
+  font-size: 0.95em;
+}
+
+.success-icon {
+  display: inline-block;
+}
+
+.success-icon svg {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
