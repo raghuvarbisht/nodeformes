@@ -1,4 +1,5 @@
 import express from "express";
+import { logger } from "./middleware/logger.js";
 import path from "path";
 
 const app = express();
@@ -7,18 +8,20 @@ const absPath = path.resolve("view"); // folder containing your HTML files
 // Middleware
 app.use(express.urlencoded({ extended: true })); // parse form data
 app.use(express.static("public")); // serve CSS, JS, images
+app.use(logger); //add middle ware globally for all route
 
 // EJS setup
 app.set("view engine", "ejs");
 app.set("views", absPath);
+
 
 // Routes for HTML pages
 app.get("/", (req, res) => {
   console.log("Serving homepage from:", absPath);
   res.sendFile(path.join(absPath, "home.html"));
 });
-
-app.get("/about", (req, res) => {
+ // added logger middleware
+app.get("/about",(req, res) => {
   console.log("Serving about page from:", absPath);
   res.sendFile(path.join(absPath, "about.html"));
 });
