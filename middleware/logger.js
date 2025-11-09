@@ -1,5 +1,5 @@
 export const logger = (req,res,next) => {
-    const date = new Date().toISOString();
-    console.log(`${date} == ${req.method} = ${req.url}`);
+    
+    console.log(` method = ${req.method} , url = ${req.url}`);
     next();
 }

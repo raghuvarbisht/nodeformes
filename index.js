@@ -1,5 +1,6 @@
 import express from "express";
 import { logger } from "./middleware/logger.js";
+import { requestTime } from "./middleware/requestTime.js";
 import path from "path";
 
 const app = express();
@@ -20,8 +21,9 @@ app.get("/", (req, res) => {
   console.log("Serving homepage from:", absPath);
   res.sendFile(path.join(absPath, "home.html"));
 });
- // added logger middleware
-app.get("/about",(req, res) => {
+ // added requesttime middleware
+ // to add multiple middle ware you can use array [logger, requesTime ]
+app.get("/about", requestTime, (req, res) => {
   console.log("Serving about page from:", absPath);
   res.sendFile(path.join(absPath, "about.html"));
 });
